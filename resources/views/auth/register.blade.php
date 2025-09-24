@@ -167,20 +167,20 @@
 
             <!-- First Name -->
             <div class="form-floating">
-                <label for="first_name">First Name</label>
-                <input id="first_name" type="text" name="first_name" value="{{ old('first_name') }}" required autofocus>
+                <label for="first_name"></label>
+                <input id="first_name" type="text" placeholder="First Name" name="first_name" value="{{ old('first_name') }}" required autofocus>
             </div>
 
             <!-- Last Name -->
             <div class="form-floating">
-                <label for="last_name">Last Name</label>
-                <input id="last_name" type="text" name="last_name" value="{{ old('last_name') }}" required>
+                <label for="last_name"></label>
+                <input id="last_name" type="text" placeholder="Last Name" name="last_name" value="{{ old('last_name') }}" required>
             </div>
 
             <!-- Email -->
             <div class="form-floating">
-                <label for="email">Email Address</label>
-                <input id="email" type="email" name="email" value="{{ old('email') }}" required>
+                <label for="email"></label>
+                <input id="email" type="email" placeholder="Email" name="email" value="{{ old('email') }}" required>
                 @error('email')
                     <span class="error-message">{{ $message }}</span>
                 @enderror
@@ -188,37 +188,37 @@
 
             <!-- User ID -->
             <div class="form-floating">
-                <label for="user_id">User ID</label>
-                <input id="user_id" type="text" name="user_id" value="{{ old('user_id') }}" required>
+                <label for="user_id"></label>
+                <input id="user_id" type="text" placeholder="User ID" name="user_id" value="{{ old('user_id') }}" required>
                 @error('user_id')
                     <span class="error-message">{{ $message }}</span>
                 @enderror
             </div>
 
             <!-- Gender -->
-            <div class="form-floating">
-                <label for="gender">Gender</label>
-                <select id="gender" name="gender" required>
-                    <option value=""></option>
-                    <option value="male" {{ old('gender') == 'male' ? 'selected' : '' }}>Male</option>
-                    <option value="female" {{ old('gender') == 'female' ? 'selected' : '' }}>Female</option>
-                </select>
-            </div>
+           <div class="form-floating">
+    <select id="gender" name="gender" class="form-select" required>
+        <option value="" disabled {{ old('gender') ? '' : 'selected' }}>Select Gender</option>
+        <option value="male" {{ old('gender') == 'male' ? 'selected' : '' }}>Male</option>
+        <option value="female" {{ old('gender') == 'female' ? 'selected' : '' }}>Female</option>
+    </select>
+    <label for="gender">Gender</label>
+</div>
 
             <!-- Role -->
             <div class="form-floating">
-                <label for="role">Register As</label>
-                <select id="role" name="role" required>
-                    <option value=""></option>
-                    <option value="tenant" {{ old('role') == 'tenant' ? 'selected' : '' }}>Tenant</option>
-                    <option value="landlord" {{ old('role') == 'landlord' ? 'selected' : '' }}>Landlord</option>
-                </select>
-            </div>
+    <select id="role" name="role" class="form-select" required>
+        <option value="" disabled {{ old('role') ? '' : 'selected' }}>Select Role</option>
+        <option value="tenant" {{ old('role') == 'tenant' ? 'selected' : '' }}>Tenant</option>
+        <option value="landlord" {{ old('role') == 'landlord' ? 'selected' : '' }}>Landlord</option>
+    </select>
+    <label for="role">Role</label>
+</div>
 
             <!-- Contact Number -->
             <div class="form-floating" id="contact-number-field" style="display: none;">
-                <label for="contact_number">Contact Number</label>
-                <input id="contact_number" type="text" name="contact_number" value="{{ old('contact_number') }}">
+                <label for="contact_number"></label>
+                <input id="contact_number" type="text" placeholder="Contact Number" name="contact_number" value="{{ old('contact_number') }}">
                 @error('contact_number')
                     <span class="error-message">{{ $message }}</span>
                 @enderror
@@ -226,8 +226,8 @@
 
             <!-- Password -->
             <div class="form-floating">
-                <label for="password">Password</label>
-                <input id="password" type="password" name="password" required autocomplete="new-password">
+                <label for="password"></label>
+                <input id="password" type="password" placeholder="Password" name="password" required autocomplete="new-password">
                 @error('password')
                     <span class="error-message">{{ $message }}</span>
                 @enderror
@@ -235,8 +235,8 @@
 
             <!-- Confirm Password -->
             <div class="form-floating">
-                <label for="password-confirm">Confirm Password</label>
-                <input id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password">
+                <label for="password-confirm"></label>
+                <input id="password-confirm" placeholder="Password Confirm" type="password" name="password_confirmation" required autocomplete="new-password">
             </div>
 
             <!-- Submit Button -->
