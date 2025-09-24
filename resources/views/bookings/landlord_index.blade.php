@@ -408,9 +408,12 @@
                                     <label for="landlord_terms_{{ $booking->id }}" class="form-label">
                                         <i class="fas fa-edit me-1"></i>Your Terms & Conditions
                                     </label>
-                                    <textarea name="landlord_terms" id="landlord_terms_{{ $booking->id }}"
-                                              class="form-control" rows="4" required
-                                              placeholder="Enter your terms and conditions for this booking...">{{ old('landlord_terms') }}</textarea>
+                                    <textarea name="landlord_terms" 
+          id="landlord_terms_{{ $booking->id }}"
+          class="form-control" 
+          rows="4" 
+          required
+          placeholder="Enter your terms and conditions for this booking...">{{ old('landlord_terms', $booking->landlord_terms ?? '') }}</textarea>
                                     @error('landlord_terms')
                                         <div class="text-danger mt-1">{{ $message }}</div>
                                     @enderror

@@ -162,8 +162,7 @@ class LandlordController extends Controller
             $request->validate([
                 'first_name' => 'required|string|max:50',
                 'last_name' => 'required|string|max:50',
-                'email' => 'required|email|unique:users,email,' . $user->id,
-                'gender' => 'required|in:male,female,other',
+                'gender' => 'in:male,female,other',
                 'contact_number' => 'required|string|max:20',
             ]);
 

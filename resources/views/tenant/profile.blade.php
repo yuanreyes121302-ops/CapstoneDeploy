@@ -6,7 +6,7 @@
 <style>
     /* Tenant-specific modern profile design */
     .tenant-header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background:  linear-gradient(135deg, rgba(200, 100, 100, 1), rgba(120, 40, 40, 1));
         color: white;
         padding: 2rem 0;
         margin-bottom: 2rem;
@@ -42,7 +42,7 @@
     }
 
     .profile-header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background:  linear-gradient(135deg, rgba(200, 100, 100, 1), rgba(120, 40, 40, 1));
         color: white;
         padding: 2rem;
         text-align: center;
@@ -237,13 +237,13 @@
     }
 
     .btn-tenant-primary {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, rgba(200, 100, 100, 1), rgba(120, 40, 40, 1));
         color: white;
         box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
     }
 
     .btn-tenant-primary:hover {
-        background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+        background: linear-gradient(135deg, rgba(200, 100, 100, 1), rgba(120, 40, 40, 1));
         transform: translateY(-2px);
         box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
     }
@@ -413,8 +413,7 @@
 
                 <div class="row-inputs">
                     <div class="form-group">
-                        <label class="form-label">Latitude</label>
-                        <input type="text" name="latitude" class="form-control @error('latitude') is-invalid @enderror"
+                        <input type="hidden" type="text" name="latitude" class="form-control @error('latitude') is-invalid @enderror"
                                value="{{ old('latitude', $tenant->latitude) }}" id="profileLatitude" readonly placeholder="Latitude will be calculated">
                         @error('latitude')
                             <div class="error-message">{{ $message }}</div>
@@ -422,8 +421,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Longitude</label>
-                        <input type="text" name="longitude" class="form-control @error('longitude') is-invalid @enderror"
+                        <input type="hidden" type="text" name="longitude" class="form-control @error('longitude') is-invalid @enderror"
                                value="{{ old('longitude', $tenant->longitude) }}" id="profileLongitude" readonly placeholder="Longitude will be calculated">
                         @error('longitude')
                             <div class="error-message">{{ $message }}</div>

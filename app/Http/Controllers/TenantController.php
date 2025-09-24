@@ -75,6 +75,7 @@ class TenantController extends Controller
                             'user_id' => $tenant->id,
                             'profile_image' => $filename,
                             'timestamp' => now()
+                            
                         ]);
 
                         // Log successful upload
@@ -121,13 +122,12 @@ class TenantController extends Controller
                 'last_name' => 'required|string|max:255',
                 'email' => 'required|email|unique:users,email,' . $tenant->id,
                 'gender' => 'required',
-                'dob' => 'required|date',
                 'location' => 'nullable|string|max:255',
                 'latitude' => 'nullable|numeric|between:-90,90',
                 'longitude' => 'nullable|numeric|between:-180,180',
             ]);
 
-            $data = $request->only('first_name', 'last_name', 'email', 'gender', 'dob');
+            $data = $request->only('first_name', 'last_name', 'email', 'gender');
 
             // Only update location and coordinates if location is provided
             if ($request->filled('location')) {

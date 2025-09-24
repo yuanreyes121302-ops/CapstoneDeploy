@@ -57,7 +57,7 @@
 
             /* Message Styles for Sender and Receiver */
             .message-bubble.sent {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background: linear-gradient(135deg, rgba(200, 100, 100, 1), rgba(120, 40, 40, 1));
                 color: white;
                 margin-left: auto;
                 text-align: right;

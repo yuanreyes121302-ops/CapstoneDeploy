@@ -1,6 +1,6 @@
 /* Base Container */
 .navbarcontainer {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background:  rgba(200, 100, 100, 1) !important;
     min-height: auto;
     padding: 20px 50px 50px 50px; /* Reduced padding-top */
     font-family: 'Roboto', sans-serif;

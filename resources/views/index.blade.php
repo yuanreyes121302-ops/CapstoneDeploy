@@ -3,6 +3,33 @@
 @section('content')
 
 <style>
+body{
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Headings */
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;  /* ~40px desktop */
+}
+h2 {
+  font-weight: 600;
+  font-size: 2rem;    /* ~32px */
+}
+h3 {
+  font-weight: 600;
+  font-size: 1.5rem;  /* ~24px */
+}
+
+/* Buttons & UI */
+button, .btn {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
     /* Container setup */
     .container {
         max-width: 1100px;
@@ -12,114 +39,233 @@
 
     /* Typography */
     h1, h2, h3 {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
         font-weight: 600;
         color: #2c3e50;
         margin-bottom: 0.5rem;
     }
 
-   footer {
+  footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 30px 20px 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 40px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+
+footer .footer-links {
+    margin: 10px 0;
+}
+
+footer .footer-links a {
+    color: #bbb;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #fff;
+}
+
+footer .footer-social a {
+    color: #bbb;
+    margin: 0 8px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+footer .footer-social a:hover {
+    color: #fff;
+    transform: translateY(-2px);
+}
+
     
 
-        padding: 1.5rem 0;
+    /* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f8f9fc, #eef2f7);
+}
 
-        text-align: center;
+.hero-content {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
 
-        font-family: 'Open Sans', sans-serif;
+.hero-text {
+  flex: 1;
+}
 
-        font-size: 0.9rem;
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
 
-        color: #666;
+.hero-text .highlight {
+  color: #e63946;
+}
 
-        border-top: 1px solid #ddd;
+.hero-text p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
 
-        margin-top: 4rem;
+.btn-register {
+  display: block;
+  margin: 0 auto; /* Center the button */
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 6px 15px rgba(230, 57, 70, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
 
-        background: none !important;
+.btn-register:hover {
+  background: #d62839;
+  box-shadow: 0 8px 18px rgba(230, 57, 70, 0.45);
+}
 
-        box-shadow: none !important;
+.hero-image img {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
 
-    }
-    
+/* Responsive Hero Section */
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
 
-    /* Hero section */
-    .hero {
-        text-align: center;
-        padding: 4rem 1rem 3rem;
-        background: linear-gradient(20deg, #f84242ff, #D3D3D3);
-        color: #fff;
-        border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
-        margin-bottom: 3rem;
-    }
+  .hero-text {
+    flex: none;
+    max-width: 100%;
+  }
 
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .btn-register {
+    margin: 0 auto;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Call-to-action Button */
+.search-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #dc3545;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+    transition: all 0.3s ease;
+}
+
+.search-button:hover {
+    background: #a71d2a;
+    box-shadow: 0 6px 12px rgba(220, 53, 69, 0.4);
+    transform: translateY(-2px);
+}
+
+.feature-card ul {
+  padding-left: 0;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+.feature-card ul li {
+  margin-bottom: 8px;
+}
+
+.btn-register {
+  display: inline-block; /* instead of block */
+  margin: 0; /* remove auto centering */
+}
+.feature-card a.btn-link {
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.feature-card a.btn-link:hover {
+  color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+  .feature-card h3 {
+    font-size: 1.2rem;
+  }
+  .feature-card p,
+  .feature-card ul {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-card .icon i {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .feature-card a.btn-link {
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.8rem;
-        margin-bottom: 0.5rem;
+        font-size: 2rem;
     }
-
     .hero p {
-        font-size: 1.2rem;
-        max-width: 600px;
-        margin: 0 auto 1.5rem;
+        font-size: 1rem;
     }
-
     .search-button {
-        display: inline-block;
-        background-color: #ff6b6b;
-        color: #fff;
-        font-weight: 600;
-        padding: 0.75rem 2rem;
-        font-size: 1rem;
-        border: none;
-        border-radius: 30px;
-        cursor: pointer;
-        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-        transition: background-color 0.3s ease;
-        text-decoration: none;
+        width: 100%;
     }
+}
 
-    .search-button:hover {
-        background-color: #ff4b4b;
-    }
-
-    /* Features */
-    .feature-section {
-        padding: 2rem 0 4rem;
-        background: #f9f9fb;
-        border-radius: 12px;
-        box-shadow: inset 0 0 20px #eee;
-    }
-
-    .feature-section .feature {
-        background: #fff;
-        padding: 1.8rem 1.5rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        text-align: center;
-        transition: transform 0.3s ease;
-    }
-
-    .feature-section .feature:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-
-    .feature-section .feature h3 {
-        font-size: 1.25rem;
-        margin-bottom: 0.75rem;
-        color: #34495e;
-    }
-
-    .feature-section .feature p {
-        font-size: 1rem;
-        color: #6c7a89;
-        line-height: 1.5;
-    }
-
-    .feature-section .container {
-        /* Using Bootstrap grid now */
-    }
 
     /* Testimonial */
     .testimonial-section {
@@ -167,23 +313,19 @@
     }
 
     /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .hero {
-            padding: 3rem 1rem 2rem;
-        }
-
-        .hero h1 {
-            font-size: 2.4rem;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-        }
+   
 
         .search-button {
             padding: 0.7rem 1.8rem;
             font-size: 1rem;
         }
+        
+        .feature-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
         .feature-section {
             padding: 2rem 0 3rem;
@@ -210,15 +352,7 @@
         }
     }
 
-    @media (max-width: 480px) {
-        .hero h1 {
-            font-size: 2rem;
-        }
-
-        .hero p {
-            font-size: 1rem;
-        }
-
+   
         .search-button {
             padding: 0.6rem 1.5rem;
             font-size: 0.95rem;
@@ -239,7 +373,7 @@
         .property-title {
             font-size: 1.2rem;
         }
-    }
+    
 
     .property-card {
         border: 1px solid #ddd;
@@ -270,34 +404,81 @@
 </style>
 
 <div class="hero">
-    <h1>Welcome to DormHub</h1>
-    <p>Find and manage student dorms easily. Start your search for the perfect living space now.</p>
-    <a href="register" class="search-button" role="button" aria-label="Search for Dorms">Register</a>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 style="">Welcome to <span class="highlight" style="font-size: 40px ">DormHub</span></h1>
+      <p>
+        Find and manage student dorms easily. <br>
+        Start your search for the perfect living space today and experience hassle-free living.  
+      </p>
+      <a href="login" class="search-button" role="button" aria-label="Search for Dorms" style="background-color: black">Login</a>
+      <a href="register" class="search-button" role="button" aria-label="Search for Dorms">Register</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://static.where-e.com/Philippines/Central_Luzon_Region/Pampanga/Don-Honorio-Ventura-State-University_d4f0672b8be875221f3eb060d5a99fe4.jpg" alt="Dorm Building">
+    </div>
+  </div>
 </div>
 
-<div class="feature-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="feature">
-                    <h3>Find Your Perfect Dorm</h3>
-                    <p>Search and compare various dorms based on location, price, and amenities.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="feature">
-                    <h3>Easy Booking</h3>
-                    <p>Book your dorm online with a few clicks and secure your spot with just one click.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="feature">
-                    <h3>Manage Your Stay</h3>
-                    <p>Keep track of your booking, payment, and rental duration with our easy-to-use dashboard.</p>
-                </div>
-            </div>
+
+
+
+<div class="feature-section py-5">
+  <div class="container">
+    <div class="row text-center">
+      
+      <!-- Feature 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="feature-card p-4 shadow-sm rounded">
+          <div class="icon mb-3 text-primary">
+            <i class="fas fa-home fa-2x"></i>
+          </div>
+          <h3>Find Your Perfect Dorm</h3>
+          <p class="text-muted">Easily compare hundreds of student housing options.</p>
+          <ul class="list-unstyled text-start mt-3">
+            <li>✔ Filter by location & budget</li>
+            <li>✔ Check available amenities</li>
+            <li>✔ Read student reviews</li>
+          </ul>
+          
         </div>
+      </div>
+      
+      <!-- Feature 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="feature-card p-4 shadow-sm rounded">
+          <div class="icon mb-3 text-success">
+            <i class="fas fa-mouse-pointer fa-2x"></i>
+          </div>
+          <h3>Easy Booking</h3>
+          <p class="text-muted">Reserve your spot in just a few clicks.</p>
+          <ul class="list-unstyled text-start mt-3">
+            <li>✔ Instant confirmation</li>
+            <li>✔ Secure online payments</li>
+            <li>✔ Flexible cancellation options</li>
+          </ul>
+          
+        </div>
+      </div>
+      
+      <!-- Feature 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="feature-card p-4 shadow-sm rounded">
+          <div class="icon mb-3 text-warning">
+            <i class="fas fa-chart-line fa-2x"></i>
+          </div>
+          <h3>Manage Your Stay</h3>
+          <p class="text-muted">Stay organized with our smart dashboard.</p>
+          <ul class="list-unstyled text-start mt-3">
+            <li>✔ Track payments & receipts</li>
+            <li>✔ Manage rental duration</li>
+            <li>✔ Get instant notifications</li>
+          </ul>
+        </div>
+      </div>
+      
     </div>
+  </div>
 </div>
 
 <div class="tenant-container" style="margin-top: 3rem;">
@@ -345,7 +526,7 @@
 
     <div class="text-center mt-4">
         <a href="{{ route('tenant.properties.index') }}" class="btn btn-tenant btn-tenant-primary">
-            <i class="fas fa-list"></i> View All Properties
+            <i class="fas fa-list"></i> Browse Properties
         </a>
     </div>
 </div>
@@ -355,6 +536,10 @@
 <footer>
 
     &copy; {{ date('Y') }} DormHub. All rights reserved.
+    <div class="footer-links">
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+</div>
 
 </footer>
 </div>

@@ -4,7 +4,7 @@
 <style>
     /* Tenant-specific modern property details design */
     .tenant-header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, rgba(200, 100, 100, 1), rgba(120, 40, 40, 1));
         color: white;
         padding: 2rem 0;
         margin-bottom: 2rem;
@@ -271,13 +271,13 @@
     }
 
     .btn-tenant-primary {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, rgba(200, 100, 100, 1), rgba(120, 40, 40, 1));
         color: white;
         box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
     }
 
     .btn-tenant-primary:hover {
-        background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+        background: linear-gradient(135deg, rgba(200, 100, 100, 1), rgba(120, 40, 40, 1));
         transform: translateY(-2px);
         box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
     }
@@ -329,7 +329,7 @@
         background-color: #f9f9f9;
         padding: 1.5rem;
         border-radius: 10px;
-        border-left: 4px solid #667eea;
+        border-left: 4px solid linear-gradient(135deg, rgba(200, 100, 100, 1), rgba(120, 40, 40, 1));
         margin-bottom: 1rem;
     }
 
@@ -351,7 +351,7 @@
     }
 
     .form-control:focus {
-        border-color: #667eea;
+        border-color: linear-gradient(135deg, rgba(200, 100, 100, 1), rgba(120, 40, 40, 1));
         box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         outline: none;
     }
@@ -365,7 +365,7 @@
     }
 
     .form-select:focus {
-        border-color: #667eea;
+        border-color: linear-gradient(135deg, rgba(200, 100, 100, 1), rgba(120, 40, 40, 1));
         box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         outline: none;
     }
